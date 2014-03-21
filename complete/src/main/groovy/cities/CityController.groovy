@@ -1,9 +1,6 @@
 package cities
 
 import com.mongodb.BasicDBObject
-import com.mongodb.Mongo
-import org.springframework.beans.factory.annotation.Autowired
-
 import javax.annotation.PostConstruct;
 import org.springframework.web.bind.annotation.*
 import org.springframework.http.*
@@ -29,9 +26,6 @@ class CityController {
             return new ResponseEntity(HttpStatus.NOT_FOUND)
         }
     }
-
-    @Autowired
-    Mongo mongo
 
     @PostConstruct
     void populateCities() {
