@@ -20,7 +20,7 @@ class CityController {
 
     @RequestMapping(value="/near/{cityName}", method = GET)
     ResponseEntity near(@PathVariable String cityName) {
-        def city = City.findByName(cityName)
+        def city = City.where { name == cityName }.find()
         if(city) {
             List<City> closest = City.findAllByLocationNear(city.location)
             return new ResponseEntity([name: closest[1].name], HttpStatus.OK)
