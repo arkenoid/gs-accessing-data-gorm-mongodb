@@ -1,4 +1,4 @@
-@Grab("org.grails:gorm-mongodb-spring-boot:1.0.0.BUILD-SNAPSHOT")
+@Grab("org.grails:gorm-mongodb-spring-boot:1.0.0.M1")
 import grails.persistence.*
 import grails.mongodb.geo.*
 import org.bson.types.ObjectId

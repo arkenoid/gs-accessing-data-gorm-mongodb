@@ -25,7 +25,7 @@ repositories {
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
-    compile("org.grails:gorm-mongodb-spring-boot:1.0.0.BUILD-SNAPSHOT")
+    compile("org.grails:gorm-mongodb-spring-boot:1.0.0.M1")
     testCompile("junit:junit")
 }
 
