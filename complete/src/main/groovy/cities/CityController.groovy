@@ -32,10 +32,14 @@ class CityController {
         City.withTransaction{
             City.collection.remove(new BasicDBObject())
             City.saveAll( 
-                [ new City(name:"London", location: Point.valueOf( [-0.125487, 51.508515] ) ),
-                  new City(name:"Paris", location: Point.valueOf( [2.352222, 48.856614] ) ),
-                  new City(name:"New York", location: Point.valueOf( [-74.005973, 40.714353] ) ),
-                  new City(name:"San Francisco", location: Point.valueOf( [-122.419416, 37.774929] ) ) ] 
+                [ new City( name:"London", 
+                            location: Point.valueOf( [-0.125487, 51.508515] ) ),
+                  new City( name:"Paris", 
+                            location: Point.valueOf( [2.352222, 48.856614] ) ),
+                  new City( name:"New York", 
+                            location: Point.valueOf( [-74.005973, 40.714353] ) ),
+                  new City( name:"San Francisco", 
+                            location: Point.valueOf( [-122.419416, 37.774929] ) ) ] 
             )
         }
     }

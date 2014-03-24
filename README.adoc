@@ -98,9 +98,11 @@ The `populateCities` method is run at startup due to the presence of the `@PostC
         City.withTransaction{
             City.collection.remove(new BasicDBObject())
             City.saveAll(
-                [ new City(name:"London", location: Point.valueOf( [-0.125487, 51.508515] ) ),
+                [ new City(name:"London", 
+                           location: Point.valueOf( [-0.125487, 51.508515] ) ),
                   ...
-                  new City(name:"San Francisco", location: Point.valueOf( [-122.419416, 37.774929] ) ) ]
+                  new City(name:"San Francisco", 
+                           location: Point.valueOf( [-122.419416, 37.774929] ) ) ]
             )
         }
     }
