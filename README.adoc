@@ -93,34 +93,34 @@ The `populateCities` method is run at startup due to the presence of the `@PostC
 
 [source,groovy]
 ----
-    @PostConstruct
-    void populateCities() {
-        City.withTransaction{
-            City.collection.remove(new BasicDBObject())
-            City.saveAll(
-                [ new City(name:"London", 
-                           location: Point.valueOf( [-0.125487, 51.508515] ) ),
-                  ...
-                  new City(name:"San Francisco", 
-                           location: Point.valueOf( [-122.419416, 37.774929] ) ) ]
-            )
-        }
+@PostConstruct
+void populateCities() {
+    City.withTransaction{
+        City.collection.remove(new BasicDBObject())
+        City.saveAll(
+            [ new City(name:"London", 
+                       location: Point.valueOf( [-0.125487, 51.508515] ) ),
+              ...
+              new City(name:"San Francisco", 
+                       location: Point.valueOf( [-122.419416, 37.774929] ) ) ]
+        )
     }
+}
 ----
 
 The `near` method takes the city name as parameter and then proceeds to find the nearest cities. Note that the first entry in the reult will be the city queried itself, so an index of 1 is used to find the closest city:
 
 [source,groovy]
 ----
-    @RequestMapping(value="/near/{cityName}", method = GET)
-    ResponseEntity near(@PathVariable String cityName) {
-        def city = City.findByName(cityName)
-        if(city) {
-            List<City> closest = City.findAllByLocationNear(city.location)
-            return new ResponseEntity([name: closest[1].name], HttpStatus.OK)
-        }
-        ...
+@RequestMapping(value="/near/{cityName}", method = GET)
+ResponseEntity near(@PathVariable String cityName) {
+    def city = City.findByName(cityName)
+    if(city) {
+        List<City> closest = City.findAllByLocationNear(city.location)
+        return new ResponseEntity([name: closest[1].name], HttpStatus.OK)
     }
+    ...
+}
 ----
 
 Further down in the guide, you'll see how to run the application.
