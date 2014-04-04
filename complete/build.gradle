@@ -6,7 +6,7 @@ buildscript {
         maven { url "http://repo.spring.io/release" }
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.0.RC4")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.0.RELEASE")
     }
 }
 
@@ -26,7 +26,7 @@ repositories {
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
-    compile("org.grails:gorm-mongodb-spring-boot:1.0.0.M1")
+    compile("org.grails:gorm-mongodb-spring-boot:1.0.0.RC1")
 
     testCompile("junit:junit")
 }
