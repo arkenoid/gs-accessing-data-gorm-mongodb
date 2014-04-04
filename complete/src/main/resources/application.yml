@@ -3,4 +3,4 @@ spring:
         host: "localhost"
         databaseName: "citydb"
         options:
-            connectionsPerHost:20
+            connectionsPerHost: 20
