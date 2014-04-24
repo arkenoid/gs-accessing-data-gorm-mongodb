@@ -15,7 +15,7 @@ projects: [spring-boot, grails]
 :source-highlighter: prettify
 :project_id: gs-accessing-data-gorm-mongodb
 
-This guide walks you through the process of creating a Spring Boot application that uses Grails Object Relational Mapper (http://grails.org/doc/latest/guide/GORM.html[GORM]) and http://www.mongodb.org[MongoDB] for persistence. The application uses to http://springsource.github.io/grails-data-mapping/mongo/manual/index.html[GORM for MongoDB plugin].
+This guide walks you through the process of creating a Spring Boot application that uses Grails Object Relational Mapper (http://grails.org/doc/latest/guide/GORM.html[GORM]) and http://www.mongodb.org[MongoDB] for persistence. The application uses to http://grails.github.io/grails-data-mapping/mongo/manual/index.html[GORM for MongoDB plugin].
 
 == What you'll build
 
@@ -70,7 +70,7 @@ include::complete/src/main/groovy/cities/City.groovy[]
 
 The http://grails.org/doc/latest/guide/GORM.html#gormConstraints[constraint block] defines any validation rules. In this case, we ensure that the `name` cannot be blank and the `location` cannot be `null`.
 
-The http://springsource.github.io/grails-data-mapping/mongo/manual/guide/3.%20Mapping%20Domain%20Classes%20to%20Mongo%20Collections.html#3.2%20Indexing%20Queries[mapping block] specifies that the `location` property should be indexed using a http://docs.mongodb.org/manual/core/2dsphere/[geospatial 2dsphere] index.
+The http://grails.github.io/grails-data-mapping/mongo/manual/guide/3.%20Mapping%20Domain%20Classes%20to%20Mongo%20Collections.html#3.2%20Indexing%20Queries[mapping block] specifies that the `location` property should be indexed using a http://docs.mongodb.org/manual/core/2dsphere/[geospatial 2dsphere] index.
 
 The `location` property is a `grails.mongodb.geo.Point` that gets persisted to MongoDB as a http://geojson.org/geojson-spec.html#id2[GeoJSON Point].
 
