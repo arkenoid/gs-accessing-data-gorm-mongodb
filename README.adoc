@@ -13,7 +13,7 @@ projects: [spring-boot, grails]
 :toc:
 :icons: font
 :source-highlighter: prettify
-:project_id: gs-accessing-data-gorm
+:project_id: gs-accessing-data-gorm-mongodb
 
 This guide walks you through the process of creating a Spring Boot application that uses Grails Object Relational Mapper (http://grails.org/doc/latest/guide/GORM.html[GORM]) and http://www.mongodb.org[MongoDB] for persistence. The application uses to http://springsource.github.io/grails-data-mapping/mongo/manual/index.html[GORM for MongoDB plugin].
 
