@@ -1,4 +1,5 @@
-@Grab("org.grails:gorm-mongodb-spring-boot:1.0.0.RC1")
+@Grab("org.grails:gorm-mongodb-spring-boot:1.0.0.RC2")
+@Grab("org.mongodb:mongo-java-driver:2.12.0")
 import grails.persistence.*
 import grails.mongodb.geo.*
 import org.bson.types.ObjectId
