@@ -212,6 +212,21 @@ NOTE: This assumes you shut down the previous application, to avoid a port colli
 
 Then simply follow the previous steps to <<testing,test the application>>.
 
+== Configuring the MongoDB Connection
+
+To configure the MongoDB connection settings you can use the application's `application.yml` file:
+
+`src/main/resources/application.yml`
+[source,groovy]
+----
+include::complete/src/main/resources/application.yml[]
+----
+
+The available configuration options are the same as those provided by the http://grails.github.io/grails-data-mapping/mongodb/manual/guide/2.%20Getting%20Started.html#2.3%20Advanced%20Configuration[MongoDB plugin for Grails].
+
+Alternatively, if you have custom configuration requirements then you can configure a Spring bean of type `com.mongodb.Mongo` in your application.
+
+
 == Summary
 
 Congratulations! You've just developed a Spring application using GORM for MongoDB data access as well as a RESTful front end!
